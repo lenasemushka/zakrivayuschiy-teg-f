@@ -439,14 +439,14 @@
     <footer class="footer">
       <button 
         type="button" 
-        class="modal-button" 
-        onclick="document.getElementById('dialog-id').showModal()">
+        class="modal-button"
+        onclick="window['dialog-id'].showModal()">
           <svg class="icon" viewBox="0 0 29 28">
               <use href="#diskette"></use>
           </svg>
           <span class="button__text">Сохранить на память</span>
       </button>
-      <dialog id="dialog-id">
+      <dialog aria-label="сохранение" aria-labelledby="dialog-id">
         <div class="dialog__content">
           <svg class="dialog__icon" viewBox="0 0 29 28">
             <use href="#diskette"></use>
@@ -457,7 +457,8 @@
           <button 
             class="dialog__close-button"
             type="button"
-            onclick="document.getElementById('dialog-id').close()"
+            id="dialog-id"
+            onclick="window['dialog-id'].close()"
           >
           Ок
           </button>
