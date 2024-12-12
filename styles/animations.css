@@ -59,7 +59,7 @@
 /* Состояние при наведении */
 .like-icon:not(.is-liked):hover .core {
   fill: var(--outline-fill-color);
-  transition: fill 0.3s ease; /* Начинается сразу при наведении */
+  transition: fill 0.3s ease;
   transition-delay: 0s;
 }
 
@@ -71,7 +71,7 @@
 
 .like-icon:not(.is-liked):not(:hover) .main-body {
   fill: none;
-  transition: fill 0.3s ease; 
+  transition: fill 0.3s ease;
   transition-delay: 0s;
 }
 
@@ -84,7 +84,7 @@
 /* Состояние при нажатии */
 .like-icon:not(.is-liked):active .core {
   fill: var(--animation-fill-color);
-  transition: fill 0.3s ease; /* Начинается сразу при нажатии */
+  transition: fill 0.3s ease;
   transition-delay: 0s;
 }
 
@@ -97,12 +97,12 @@
 /* Возврат к исходному состоянию */
 .like-icon:not(.is-liked):not(:hover):not(:active) .core {
   fill: none;
-  transition-delay: 0.03s; /* Задержка 0.03s при уходе курсора */
+  transition-delay: 0.03s;
 }
 
 .like-icon:not(.is-liked):not(:hover):not(:active) .main-body {
   fill: none;
-  transition-delay: 0s; /* Без задержки при уходе курсора */
+  transition-delay: 0s;
 }
 
 /* Анимация при клике */
