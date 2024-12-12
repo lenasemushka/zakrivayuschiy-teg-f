@@ -24,6 +24,10 @@ ol,
 li {
   margin: 0;
   padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
 a {
@@ -35,6 +39,9 @@ input {
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
+  padding-block: 0;
+  padding-inline: 0;
+  border-width: 0;
 }
 
 ul,

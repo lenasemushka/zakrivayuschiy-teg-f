@@ -1,1 +1,54 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  /* шрифты */
+  --font-main: 'Inter-Variable', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-accent: 'Press Start 2P', cursive;
+
+  /* Начертания */
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  /* Размеры заголовка */
+  --header-min-inline-size: 375px;
+  --header-max-inline-size: 700px;
+  
+  /* Размеры логотипа */
+  --logo-min-size: 49px;
+  --logo-max-size: 65px;
+
+  /* Размеры заголовков */
+  --title-min-size: 14px;
+  --title-max-size: 23px;
+
+  /* Отступы для заголовка */
+  --header-padding-min: 122px;
+  --header-padding-max: 130px;
+
+  /* Другие переменные */
+  --content-width: clamp(320px, 100%, 1200px);
+  --label-outline-color: #fff;
+
+  /* Отступы для футера */
+  --footer-min-inline-padding: 33px;
+  --footer-max-inline-padding: 180px;
+
+  /* Фоновое изображение */
+  --background-image:
+    repeating-linear-gradient(to right, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0px, #d3d3d3 2px, transparent 2px, transparent 4px),
+    linear-gradient(to bottom, #e7e7e7 0%,  #e7e7e7 0.01%, #1a1a1a 100%);
+  
+  /* Основные цвета */
+  --accent-color: #000;
+  --text-color: #fff;
+  --bg-color: #fff;
+
+  /* Переходы */
+  --transition-duration: 0.5s;
+  --transition-easing: ease-in-out;
+
+  /* Цвета для иконок */
+  --fill-color: #fff;
+  --animation-fill-color: #f00;
+  --outline-fill-color: #000;
+}
