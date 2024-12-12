@@ -440,7 +440,7 @@
       <button 
         type="button" 
         class="modal-button" 
-        onclick="window['dialog-id'].showModal()">
+        onclick="document.getElementById('dialog-id').showModal()">
           <svg class="icon" viewBox="0 0 29 28">
               <use href="#diskette"></use>
           </svg>
@@ -457,7 +457,7 @@
           <button 
             class="dialog__close-button"
             type="button"
-            onclick="window['dialog-id'].close()"
+            onclick="document.getElementById('dialog-id').close()"
           >
           Ок
           </button>
