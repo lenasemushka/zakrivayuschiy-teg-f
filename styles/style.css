@@ -176,18 +176,21 @@
   grid-template-columns: min-content 130px;
   grid-auto-rows: minmax(38px, min-content);
   justify-content: end;
-  gap: 19px;
+  gap: 8px;
   margin-block-start: 25px;
 }
 
 .card__icon-button {
   position: relative;
-  width: 27px;
-  height: 24px;
+  width: 39px;
+  height: 38px;
   border: 2px solid transparent;
   background-color: var(--bg-color);
   transition: border-color 0.3s ease;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card__icon-button:focus {
