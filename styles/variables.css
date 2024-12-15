@@ -2,7 +2,7 @@
 :root {
   /* шрифты */
   --font-main: 'Inter-Variable', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-accent: 'Press Start 2P', cursive;
+  --font-accent: 'Press Start 2P', fantasy;
 
   /* Начертания */
   --weight-regular: 400;
