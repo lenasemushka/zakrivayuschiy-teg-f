@@ -73,7 +73,6 @@
   font-variation-settings: "wght" var(--weight-bold), 700;
   font-size: inherit;
   background-color: var(--bg-color);
-  font-variation-settings: initial;
 }
 
 .card__image-wrapper {
@@ -359,14 +358,14 @@ dialog[open]::backdrop {
   justify-content: center;
 }
 
-.dialog__close-button { 
-  width: 100%; 
+.dialog__close-button {
+  width: 100%;
   min-height: 42px;
-  font-family: var(--font-accent); 
-  font-size: 14px; 
-  line-height: 0.9; 
-  text-align: center; 
-  text-transform: uppercase; 
+  font-family: var(--font-accent);
+  font-size: 14px;
+  line-height: 0.9;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 @media (min-width: 700px) {
