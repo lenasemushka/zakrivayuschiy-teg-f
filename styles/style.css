@@ -292,79 +292,79 @@ button:hover:before {
   mix-blend-mode: difference;
 }
 
-dialog { 
-  z-index: 1000; 
+dialog {
+  z-index: 1000;
   inline-size: clamp(341px, calc(341px + (353 - 341) * ((100vw - 375px) / (1440 - 375))), 353px);
-  max-block-size: 100%; 
-  border: none; 
-  padding: 30px calc(42px - (12 * ((100vw - 375px) / (1440 - 375)))); 
+  max-block-size: 100%;
+  border: none;
+  padding: 30px calc(42px - (12 * ((100vw - 375px) / (1440 - 375))));
   outline: 2px solid var(--accent-color);
 } 
 
-dialog::backdrop { 
-  opacity: 0; 
-  background: rgba(0, 0, 0, 0.75); 
-  transition: opacity 0.3s ease; 
+dialog::backdrop {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.75);
+  transition: opacity 0.3s ease;
 } 
 
-dialog[open] { 
-  display: grid; 
-  grid-template-columns: auto 1fr; 
-  grid-template-rows: auto auto; 
-  justify-content: center; 
-  align-items: center; 
+dialog[open] {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  align-items: center;
   row-gap: 30px;
   margin: auto;
 } 
 
-dialog[open]::backdrop { 
-  opacity: 1; 
+dialog[open]::backdrop {
+  opacity: 1;
 } 
 
-.dialog__content { 
-  display: grid; 
-  grid-template-columns: auto 1fr; 
-  grid-column: 1 / 3; 
-  grid-row: 1; 
-  align-items: center; 
-  gap: 20px; 
+.dialog__content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column: 1 / 3;
+  grid-row: 1;
+  align-items: center;
+  gap: 20px;
 } 
 
-.dialog__icon { 
-  grid-column: 1; 
-  grid-row: 1; 
-  inline-size: 39px; 
-  block-size: 39px; 
-  color: var(--accent-color); 
-  fill: currentColor; 
+.dialog__icon {
+  grid-column: 1;
+  grid-row: 1;
+  inline-size: 39px;
+  block-size: 39px;
+  color: var(--accent-color);
+  fill: currentColor;
 } 
 
-.dialog__text { 
-  grid-column: 2; 
-  grid-row: 1; 
-  justify-self: start; 
-  border: none; 
+.dialog__text {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: start;
+  border: none;
   line-height: 1.5;
   font-size: 14px;
-  text-align: left; 
-  text-transform: uppercase; 
+  text-align: left;
+  text-transform: uppercase;
 } 
 
-.dialog__buttons { 
-  display: flex; 
-  grid-column: 1 / 3; 
-  grid-row: 2; 
-  justify-content: center; 
+.dialog__buttons {
+  display: flex;
+  grid-column: 1 / 3;
+  grid-row: 2;
+  justify-content: center;
 } 
 
-.dialog__close-button { 
-  width: 100%; 
-  min-height: 38px; 
-  font-family: var(--font-accent); 
-  font-size: 14px; 
-  line-height: 0.9; 
-  text-align: center; 
-  text-transform: uppercase; 
+.dialog__close-button {
+  width: 100%;
+  min-height: 38px;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  line-height: 0.9;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 @media (min-width: 700px) {
