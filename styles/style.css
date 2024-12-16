@@ -13,7 +13,7 @@
 .page {
   width: clamp(var(--header-min-inline-size), 100%, var(--header-max-inline-size));
   height: 100dvb;
-  margin: 0 auto;
+  margin: auto;
   color: var(--accent-color);
   font-family: var(--font-main), sans-serif;
   font-size: 18px;
@@ -23,7 +23,7 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100vh;
-  font-variation-settings: "wght" var(--weight-regular), 400;
+  font-variation-settings: "wght" var(--weight-regular);
 }
 
 .header {
@@ -70,9 +70,9 @@
 .card__title {
   padding: 7px 12px;
   outline: 2px solid #000;
-  font-variation-settings: "wght" var(--weight-bold), 700;
   font-size: inherit;
   background-color: var(--bg-color);
+  font-variation-settings: "wght" var(--weight-bold);
 }
 
 .card__image-wrapper {
@@ -82,11 +82,11 @@
 
 .card__image {
   display: block;
-  inline-size: 100%;
-  block-size: 100%;
-  background-size: cover;
   object-fit: cover;
   object-position: top;
+  background-size: cover;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .filter-brightness {
@@ -162,7 +162,10 @@
   flex-direction: column;
   gap: 27px;
   line-height: 1.17;
-  font-variation-settings: "wght" var(--weight-regular), 400;
+}
+
+.card__paragraph {
+  font-variation-settings: "wght" var(--weight-regular);
 }
 
 .button__container {
@@ -176,15 +179,15 @@
 
 .card__icon-button {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 39px;
   height: 38px;
   border: 2px solid transparent;
   background-color: var(--bg-color);
   transition: border-color 0.3s ease;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .card__icon-button:focus {
@@ -216,13 +219,12 @@
 button {
   position: relative;
   z-index: 1;
-  overflow: hidden;
   border: 2px solid var(--accent-color);
+  overflow: hidden;
   color: var(--accent-color);
   background-color: var(--bg-color);
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
   cursor: pointer;
-
 }
 
 .button::before {
@@ -248,124 +250,121 @@ button:hover:before {
   fill: var(--accent-color);
 }
 
-.card__like-button:focus,
-.modal-button:focus {
+.button:focus {
   outline: none;
 }
 
-.card__like-button:focus-visible,
-.modal-button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--accent-color);
   transition: box-shadow 0.5s ease-in-out;
 }
 
 .modal-container {
-  margin: 0 auto;
   display: flex;
   justify-content: center;
-  padding-block: 0px 100px;
+  margin: auto;
   padding-inline: 33px;
+  padding-block: 0px 100px;
 }
 
 .modal-button {
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: baseline;
   gap: 8px;
-  max-width: 342px;
-  width: 100%;
+  min-width: 306px;
+  max-width: 335px;
   min-height: 38px;
+  margin: auto;
   padding-block: 15px;
-  padding-inline: 20px;
+  padding-inline: 19px;
 }
 
 .modal-button .icon {
   position: relative;
   z-index: 1;
   width: clamp(21px, calc(38px - 2.5vw), 29px);
-  block-size: clamp(21px, calc(36px - 2.2vw), 28px);
   color: var(--text-color);
   fill: currentColor;
   transition: fill 0.5s ease-in-out;
+  block-size: clamp(21px, calc(36px - 2.2vw), 28px);
   mix-blend-mode: difference;
 }
 
-dialog {
-  z-index: 1000;
-  min-width: 341px;
-  max-width: 353px;
-  max-height: 100%;
-  margin: auto;
-  border: none;
-  padding: 30px 42px;
+dialog { 
+  z-index: 1000; 
+  inline-size: clamp(341px, calc(341px + (353 - 341) * ((100vw - 375px) / (1440 - 375))), 353px);
+  max-block-size: 100%; 
+  border: none; 
+  padding: 30px calc(42px - (12 * ((100vw - 375px) / (1440 - 375)))); 
   outline: 2px solid var(--accent-color);
-}
+} 
 
-dialog::backdrop {
-  opacity: 0;
-  background: rgba(0, 0, 0, 0.75);
-  transition: opacity 0.3s ease;
-}
+dialog::backdrop { 
+  opacity: 0; 
+  background: rgba(0, 0, 0, 0.75); 
+  transition: opacity 0.3s ease; 
+} 
 
-dialog[open] {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto auto;
-  justify-content: center;
-  align-items: center;
+dialog[open] { 
+  display: grid; 
+  grid-template-columns: auto 1fr; 
+  grid-template-rows: auto auto; 
+  justify-content: center; 
+  align-items: center; 
   row-gap: 30px;
-  column-gap: 20px;
-}
+  margin: auto;
+} 
 
-dialog[open]::backdrop {
-  opacity: 1;
-}
+dialog[open]::backdrop { 
+  opacity: 1; 
+} 
 
-.dialog__content {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-column: 1 / 3;
-  grid-row: 1;
-  align-items: center;
-  gap: 20px;
-}
+.dialog__content { 
+  display: grid; 
+  grid-template-columns: auto 1fr; 
+  grid-column: 1 / 3; 
+  grid-row: 1; 
+  align-items: center; 
+  gap: 20px; 
+} 
 
-.dialog__icon {
-  grid-column: 1;
-  grid-row: 1;
-  width: 38px;
-  height: 38px;
-  color: var(--accent-color);
-  fill: currentColor;
-}
+.dialog__icon { 
+  grid-column: 1; 
+  grid-row: 1; 
+  inline-size: 39px; 
+  block-size: 39px; 
+  color: var(--accent-color); 
+  fill: currentColor; 
+} 
 
-.dialog__text {
-  grid-column: 2;
-  grid-row: 1;
-  justify-self: start;
-  border: none;
+.dialog__text { 
+  grid-column: 2; 
+  grid-row: 1; 
+  justify-self: start; 
+  border: none; 
   line-height: 1.5;
-  text-align: left;
-  text-transform: uppercase;
-}
-
-.dialog__buttons {
-  display: flex;
-  grid-column: 1 / 3;
-  grid-row: 2;
-  justify-content: center;
-}
-
-.dialog__close-button {
-  width: 100%;
-  min-height: 42px;
-  font-family: var(--font-accent);
   font-size: 14px;
-  line-height: 0.9;
-  text-align: center;
-  text-transform: uppercase;
+  text-align: left; 
+  text-transform: uppercase; 
+} 
+
+.dialog__buttons { 
+  display: flex; 
+  grid-column: 1 / 3; 
+  grid-row: 2; 
+  justify-content: center; 
+} 
+
+.dialog__close-button { 
+  width: 100%; 
+  min-height: 38px; 
+  font-family: var(--font-accent); 
+  font-size: 14px; 
+  line-height: 0.9; 
+  text-align: center; 
+  text-transform: uppercase; 
 }
 
 @media (min-width: 700px) {
@@ -396,10 +395,6 @@ dialog[open]::backdrop {
   }
 
   .container {
-    max-width: 100%;
-  }
-
-  dialog {
     max-width: 100%;
   }
 }
